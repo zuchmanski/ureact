@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+      <title>uRreact</title>
+      
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <script type="module" src="app.js"></script>
+
+        <div class="grid-container">
+            <div id="main"></div>
+
+            <pre id="oldTree"></pre>
+            <pre id="newTree"></pre>
+        </div>
+
+        <style>
+            body {
+                padding: 1em;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 10px;
+            }
+           
+
+            pre {
+                font-size: 14px;
+                border: 1px solid #aaa;
+                line-height: 1.3;
+            }
+
+
+            #oldTree:before {
+                content: 'DOM tree (before)';
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            #newTree:before {
+                content: 'DOM tree (current)';
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .tag {
+                color: #1c3144;
+                font-weight: bold;
+            }
+
+            .attrs {
+                color: #d00000;
+            }
+        </style>
+    </body>
+</html>
